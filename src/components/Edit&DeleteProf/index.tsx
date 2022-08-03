@@ -50,16 +50,17 @@ export function EditDeleteProf() {
         navigate('/')
     }
     const docFrom = async (doc: IProfessor) => {
+        console.log(doc)
         const newData = {
             data: {
                 id: id,
-                name: doc.name,
-                email: doc.email,
-                idade: doc.idade,
-                password: doc.password,
-                genero: doc.genero,
-                turma: doc.turma,
-                turno: doc.turno,
+                name: doc.data.name,
+                email: doc.data.email,
+                idade: doc.data.idade,
+                password: doc.data.password,
+                genero: doc.data.genero,
+                turma: doc.data.turma,
+                turno: doc.data.turno,
             },
             disciplina: doc.disciplina,
             rua: doc.rua,

@@ -18,19 +18,23 @@ export interface IPessoa {
 type genero = "Masculino" | "Feminino" | "Outros";
 
 export interface IAluno {
-  name: string;
-  email: string;
-  idade: string;
-  password: string;
-  genero: string;
-  turma: string;
-  turno: string;
+  data:{
+    name: string;
+    email: string;
+    idade: string;
+    password: string;
+    genero: string;
+    turma: string;
+    turno: string;
+  }
+  
   rua: string;
   bairro: string;
   n1: number;
   n2: number;
 }
 export interface IProfessor {
+  data:{
   id: string;
   name: string;
   email: string;
@@ -39,7 +43,7 @@ export interface IProfessor {
   genero: string;
   turma: string;
   turno: string;
-
+  }
   rua: string;
   bairro: string;
   disciplina: string;

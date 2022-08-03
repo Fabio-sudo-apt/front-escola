@@ -3,31 +3,34 @@ import { Input } from './input';
 import { IProfessor } from '../../interfaces/IPessoa';
 import apiAxios from '../../util/apiAxios';
 import Select from './select';
-import { useNavigate } from "react-router-dom"; 
+import { useNavigate, useParams } from "react-router-dom"; 
 
 export function FormProf() {
     const navigate = useNavigate()
+
+    const { id } = useParams()
 
     const calcelarBtn = ()=>{
         navigate('/')
     }
     const docFrom = async (doc: IProfessor) => {
+        console.log(doc)
         
         const newUser = {
             data: {
-                name: doc.name,
-                email: doc.email,
-                idade: doc.idade,
-                password: doc.password,
-                genero: doc.genero,
-                turma: doc.turma,
-                turno: doc.turno
+                id: id,
+                name: doc.data.name,
+                email: doc.data.email,
+                idade: doc.data.idade,
+                password: doc.data.password,
+                genero: doc.data.genero,
+                turma: doc.data.turma,
+                turno: doc.data.turno
               },
               disciplina: doc.disciplina,
               rua: doc.rua,
               bairro: doc.bairro,
         }
-        console.log(doc)
        await apiAxios.post("/createProf", newUser).then(()=>{
         navigate('/')
        }).catch((e)=>{
