@@ -13,13 +13,13 @@ export function FormAluno() {
     const docFrom = async (doc: IAluno) => {
         const newUser = {
             data: {
-                name: doc.data.name,
-                email: doc.data.email,
-                idade: doc.data.idade,
-                password: doc.data.password,
-                genero: doc.data.genero,
-                turma: doc.data.turma,
-                turno: doc.data.turno,
+                name: doc.name,
+                email: doc.email,
+                idade: doc.idade,
+                password: doc.password,
+                genero: doc.genero,
+                turma: doc.turma,
+                turno: doc.turno,
               },
               n1: doc.n1,
               n2: doc.n1,

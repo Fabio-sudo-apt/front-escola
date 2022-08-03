@@ -15,34 +15,31 @@ export interface IPessoa {
   n1: number;
   n2: number;
 }
-type genero = "Masculino"|"Feminino"|"Outros"
+type genero = "Masculino" | "Feminino" | "Outros";
 
 export interface IAluno {
-  data: {
-    name: string;
-    email: string;
-    idade: string;
-    password: string;
-    genero: string;
-    turma: string;
-    turno: string;
-  };
+  name: string;
+  email: string;
+  idade: string;
+  password: string;
+  genero: string;
+  turma: string;
+  turno: string;
   rua: string;
   bairro: string;
   n1: number;
   n2: number;
 }
 export interface IProfessor {
-  data: {
-    id: string;
-    name: string;
-    email: string;
-    idade: string;
-    password: string;
-    genero: string;
-    turma: string;
-    turno: string;
-  };
+  id: string;
+  name: string;
+  email: string;
+  idade: string;
+  password: string;
+  genero: string;
+  turma: string;
+  turno: string;
+
   rua: string;
   bairro: string;
   disciplina: string;

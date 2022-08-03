@@ -15,19 +15,19 @@ export function FormProf() {
         
         const newUser = {
             data: {
-                name: doc.data.name,
-                email: doc.data.email,
-                idade: doc.data.idade,
-                password: doc.data.password,
-                genero: doc.data.genero,
-                turma: doc.data.turma,
-                turno: doc.data.turno,
+                name: doc.name,
+                email: doc.email,
+                idade: doc.idade,
+                password: doc.password,
+                genero: doc.genero,
+                turma: doc.turma,
+                turno: doc.turno
               },
               disciplina: doc.disciplina,
               rua: doc.rua,
               bairro: doc.bairro,
         }
-        console.log(newUser)
+        console.log(doc)
        await apiAxios.post("/createProf", newUser).then(()=>{
         navigate('/')
        }).catch((e)=>{
