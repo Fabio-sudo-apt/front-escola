@@ -1,6 +1,6 @@
 import * as styled from './style'
 import { Input } from './input';
-import { IAluno } from '../../interfaces/IPessoa';
+import { IAluno, IAlunoCreate } from '../../interfaces/IPessoa';
 import apiAxios from '../../util/apiAxios';
 import Select from './select';
 import { useNavigate } from "react-router-dom";
@@ -10,7 +10,7 @@ export function FormAluno() {
     const calcelarBtn = () => {
         navigate('/dashboard')
     }
-    const docFrom = async (doc: IAluno) => {
+    const docFrom = async (doc: IAlunoCreate) => {
         const newUser = {
             data: {
                 name: doc.name,

@@ -1,6 +1,6 @@
 import * as styled from './style'
 import { Input } from './input';
-import { IProfessor } from '../../interfaces/IPessoa';
+import { IProfessor, IProfessorCreate } from '../../interfaces/IPessoa';
 import apiAxios from '../../util/apiAxios';
 import Select from './select';
 import { useNavigate, useParams } from "react-router-dom"; 
@@ -13,19 +13,19 @@ export function FormProf() {
     const calcelarBtn = ()=>{
         navigate('/')
     }
-    const docFrom = async (doc: IProfessor) => {
+    const docFrom = async (doc: IProfessorCreate) => {
         console.log(doc)
         
         const newUser = {
             data: {
                 id: id,
-                name: doc.data.name,
-                email: doc.data.email,
-                idade: doc.data.idade,
-                password: doc.data.password,
-                genero: doc.data.genero,
-                turma: doc.data.turma,
-                turno: doc.data.turno
+                name: doc.name,
+                email: doc.email,
+                idade: doc.idade,
+                password: doc.password,
+                genero: doc.genero,
+                turma: doc.turma,
+                turno: doc.turno
               },
               disciplina: doc.disciplina,
               rua: doc.rua,
