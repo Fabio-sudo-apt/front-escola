@@ -48,8 +48,8 @@ export function FormAluno() {
                         <Input placeholder='Idade' type="text" name='idade' />
                         <Input placeholder='Turma' type="text" name='turma' />
 
-                        <Input placeholder='Nota 01' type="number" name='n1' />
-                        <Input placeholder='Nota 02' type="number" name='n2' />
+                        <Input placeholder='Nota 01' type="number" name='n1' max={10} min={0}/>
+                        <Input placeholder='Nota 02' type="number" name='n2' max={10} min={0}/>
 
                         <Select label='Genêro' name='genero'>
                             <option value="Masculino">Masculino</option>

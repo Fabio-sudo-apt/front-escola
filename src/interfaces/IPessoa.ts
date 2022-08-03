@@ -85,6 +85,8 @@ export interface InputFrom {
   type?: any;
   placeholder?: string;
   defaultParam?: any;
+  max?: number,
+  min?: number
 }
 
 export interface IAction {

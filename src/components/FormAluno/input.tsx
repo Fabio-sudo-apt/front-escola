@@ -5,7 +5,7 @@ import * as styled from './style'
 
 
 
-export function Input({name, type, placeholder}: InputFrom) {
+export function Input({name, type, placeholder, max, min}: InputFrom) {
     const inputRef = useRef(null)
     const {fieldName, registerField} = useField(name)
 
@@ -18,6 +18,6 @@ export function Input({name, type, placeholder}: InputFrom) {
     }, [fieldName, registerField])
 
     return (
-        <styled.input1 ref={inputRef} type={type} placeholder={placeholder} required/>
+        <styled.input1 ref={inputRef} type={type} placeholder={placeholder} required max={max} min={min}/>
     );
 }
