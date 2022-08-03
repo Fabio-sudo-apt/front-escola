@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 export function FormAluno() {
     const navigate = useNavigate()
     const calcelarBtn = () => {
-        navigate('/dashboard')
+        navigate('/')
     }
     const docFrom = async (doc: IAlunoCreate) => {
         const newUser = {
